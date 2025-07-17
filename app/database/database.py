@@ -1,6 +1,6 @@
 from datetime import datetime
 from typing import Dict, List, Optional
-from models import TaskResponse, TaskStatus, TaskPriority, BackgroundTaskStatus
+from app.models.task_models import TaskResponse, TaskStatus, TaskPriority, BackgroundTaskStatus
 import threading
 
 

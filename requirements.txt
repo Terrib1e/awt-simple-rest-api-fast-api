@@ -1,23 +1,26 @@
 # FastAPI Task Management API Dependencies
-# Compatible with Python 3.9+ (Python 3.11-3.12 recommended)
+# Python 3.13 Compatible Version (Updated)
 
-# Core FastAPI dependencies
-fastapi==0.109.0
-uvicorn[standard]==0.27.0
-pydantic==2.6.1
-python-multipart==0.0.6
+# Core FastAPI dependencies (Python 3.13 compatible)
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+pydantic==2.10.0
+pydantic-settings==2.6.0
+python-multipart==0.0.12
 
 # Testing dependencies
-pytest==8.0.0
-httpx==0.26.0
-requests==2.31.0
+pytest==8.3.0
+httpx==0.28.0
+requests==2.32.0
 
-# Alternative versions for Python 3.13 compatibility issues:
-# If above versions fail, try these:
-# fastapi==0.108.0
-# pydantic==2.5.3
-# uvicorn[standard]==0.25.0
-
-# For Python 3.13 compatibility, you may need to use:
-# --only-binary=pydantic-core
-# Or install from pre-built wheels
+# Installation Instructions for Python 3.13:
+# 1. First, uninstall any existing pydantic:
+#    pip uninstall pydantic pydantic-core pydantic-settings -y
+#
+# 2. Install with latest versions:
+#    pip install -r requirements.txt
+#
+# 3. Or install individually:
+#    pip install pydantic==2.10.0 pydantic-settings==2.6.0
+#    pip install fastapi==0.115.0 uvicorn[standard]==0.32.0
+#    pip install python-multipart==0.0.12

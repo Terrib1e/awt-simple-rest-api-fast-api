@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: task-management-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=true
+      - HOST=0.0.0.0
+      - PORT=8000
+    volumes:
+      - ./app:/app/app:ro  # Mount app directory for development
+    restart: unless-stopped
+
+  # Optional: Add database service in the future
+  # database:
+  #   image: postgres:15
+  #   container_name: task-management-db
+  #   environment:
+  #     POSTGRES_DB: taskdb
+  #     POSTGRES_USER: taskuser
+  #     POSTGRES_PASSWORD: taskpass
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+# volumes:
+#   postgres_data:
