@@ -6,12 +6,12 @@ fastapi==0.115.0
 uvicorn[standard]==0.32.0
 pydantic==2.10.0
 pydantic-settings==2.6.0
-python-multipart==0.0.12
+python-multipart==0.0.18
 
 # Testing dependencies
 pytest==8.3.0
 httpx==0.28.0
-requests==2.32.0
+requests==2.32.4
 
 # Installation Instructions for Python 3.13:
 # 1. First, uninstall any existing pydantic:
@@ -23,4 +23,4 @@ requests==2.32.0
 # 3. Or install individually:
 #    pip install pydantic==2.10.0 pydantic-settings==2.6.0
 #    pip install fastapi==0.115.0 uvicorn[standard]==0.32.0
-#    pip install python-multipart==0.0.12
+#    pip install python-multipart==0.0.18
